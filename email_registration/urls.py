@@ -1,4 +1,4 @@
-from django.conf.urls import include, url, patterns
+from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
@@ -9,9 +9,5 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'', include("pages.urls", namespace="pages")),
     url(r'^accounts/', include("accounts.urls", namespace="accounts")),
-]
-
-urlpatterns += patterns(
-    '',
     url(r'^registration/', include('registration.backends.default.urls')),
-)
+]

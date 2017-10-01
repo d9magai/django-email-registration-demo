@@ -1,7 +1,7 @@
-from django.conf.urls import url, patterns
+from django.conf.urls import url
+from pages import views
 
 
-urlpatterns = patterns(
-    'pages.views',
-    url(r'^$', 'index_view', name="index")
-)
+urlpatterns = [
+    url(r'^$', views.index_view, name="index"),
+]
